@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - API</title>
+
+</head>
+
+<body>
+
+    <center>
+        <h1>Products</h1>
+    </center>
+
+
+
+    <div id="containe" class=""></div>
+</body>
+
+</html>
+
+
+
+<script>
+
+    let api = "https://fakestoreapi.com/products"
+    async function productsDate() {
+        let products = await fetch(api);
+        let data = await products.json();
+        myFunction(data)
+        // console.log("Data", data[0])
+    }
+
+
+
+
+
+    function myFunction(data) {
+        
+        data.forEach((el) => {
+
+            let parentElement = document.getElementById("containe")
+
+            let div = document.createElement("div")
+
+            let title = document.createElement("h3")
+                title.innerText = "ABC"
+
+
+            // let description = document.createElement("p")
+
+
+            // let price = document.createElement("p")
+            //     price.innerText = el.price
+
+
+            // let category = document.createElement("p")
+
+
+            // let image = document.createElement("img")
+            //     image.src = el.image
+
+            let container = div.append(title)
+
+            // image, , price, description, category
+            parentElement.append(container)
+
+        })
+
+
+
+    }
+    productsDate()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let abc= {
+    //     category :"men's clothing",
+    //     description:"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    //     id:1,
+    //     image:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    //     price:109.95
+    // }
+
+    // console.log(abc.description)
+</script>

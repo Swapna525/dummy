@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: rgba(82, 81, 81, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 10px;
+}
+
+.user-logo{
+    font-family: "Playwrite HU", cursive;
+    font-size: 25px;
+    font-weight: 700;
+}
+.menu-bar{
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu-bar>li>a{
+    color: black;
+    text-decoration: none; 
+}
+.menu-bar>li>a:hover{
+    text-decoration: underline; 
+    color: tomato;
+}
+.resume-button{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 7px;
+    background-color: rgb(70, 70, 243);
+    color: white;
+}
+.resume-button:hover{
+    background-color: rgb(23, 124, 219);
+    color: rgb(253, 254, 255);
+    cursor: pointer;
+}
+#parent{
+    /* border: 1px solid red; */
+    width: 85%;
+    margin: auto;
+}
+#home{
+  display: flex;
+  align-items: center;  
+  justify-content: space-around;
+}
