@@ -25,52 +25,61 @@
 
 <script>
 
+
+
+function sum(a,b){
+    console.log(a,b)
+}
+sum(1)
+
+
+
+
+
     let api = "https://fakestoreapi.com/products"
+    console.log(api)
+
+
+
     async function productsDate() {
         let products = await fetch(api);
-        let data = await products.json();
-        myFunction(data)
-        // console.log("Data", data[0])
+        let apiData = await products.json();
+        myFunction(apiData)
+        console.log("Data", apiData)
     }
 
 
 
 
 
-    function myFunction(data) {
+    function myFunction(gdcw) {
         
-        data.forEach((el) => {
+        gdcw.forEach((el) => {
 
             let parentElement = document.getElementById("containe")
 
             let div = document.createElement("div")
 
             let title = document.createElement("h3")
-                title.innerText = "ABC"
+                title.innerText = el.title
 
 
-            // let description = document.createElement("p")
+            let description = document.createElement("p")
+                description.innerText = el.description
 
 
-            // let price = document.createElement("p")
-            //     price.innerText = el.price
+            let price = document.createElement("p")
+                price.innerText = el.price
+
+            let category = document.createElement("p")
+            category.innerText = el.category
 
 
-            // let category = document.createElement("p")
-
-
-            // let image = document.createElement("img")
-            //     image.src = el.image
-
-            let container = div.append(title)
-
-            // image, , price, description, category
-            parentElement.append(container)
-
+            let image = document.createElement("img")
+                image.src = el.image
+            let container = div.append(image, title, price, description, category )
+            parentElement.append(div)
         })
-
-
-
     }
     productsDate()
 
